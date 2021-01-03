@@ -1,4 +1,4 @@
-package com.jb.leetcode.array;
+package com.jb.leetcode.array.sum;
 
 /**
  * Given an array of integers that is already sorted in ascending order, find two numbers

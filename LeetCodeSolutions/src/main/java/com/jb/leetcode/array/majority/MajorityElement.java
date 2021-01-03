@@ -1,4 +1,4 @@
-package com.jb.leetcode.array;
+package com.jb.leetcode.array.majority;
 
 /**
  * Determine whether the give number is majority element in the given array

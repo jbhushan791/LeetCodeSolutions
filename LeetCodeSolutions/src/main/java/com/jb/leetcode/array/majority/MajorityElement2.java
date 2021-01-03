@@ -1,4 +1,4 @@
-package com.jb.leetcode.array;
+package com.jb.leetcode.array.majority;
 
 import java.util.ArrayList;
 import java.util.List;
