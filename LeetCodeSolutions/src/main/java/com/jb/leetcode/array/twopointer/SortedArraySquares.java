@@ -1,6 +1,4 @@
-package com.jb.leetcode.array.duplicate;
-
-import java.util.*;
+package com.jb.leetcode.array.twopointer;
 
 /**
  * Given an integer array nums sorted in non-decreasing order, return an array of the
@@ -10,12 +8,11 @@ import java.util.*;
  *
  * @author jbhushan
  */
-public class ContainsDuplicates2 {
+public class SortedArraySquares {
 
     public static void main(String[] args){
-        int[] arr = {1,2,3,1};
+        int[] arr = {-4,-1,0,3,10};
         sortedSquares(arr);
-        System.out.println(contains);
     }
 
     public static void sortedSquares(int[] arr) {
@@ -23,14 +20,14 @@ public class ContainsDuplicates2 {
         int l = 0;
         int r = arr.length-1;
 
-        for(int i=arr.length-1; i >=0; i++){
+        for(int i=arr.length-1; i >=0; i--){
             int square = 0;
            if(Math.abs(arr[l]) > Math.abs(arr[r])){
-             square = arr[r];
-             r--;
-           }else{
-               square = arr[l];
+             square = arr[l];
                l++;
+           }else{
+               square = arr[r];
+              r--;
            }
            result[i] = square*square;
         }
