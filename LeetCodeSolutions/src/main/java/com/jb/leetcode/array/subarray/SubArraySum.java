@@ -32,8 +32,10 @@ public class SubArraySum {
             sum += arr[i];
             if(map.containsKey(sum-target)){
                 count += map.get(sum-target);
+            } else {
+                map.put(sum, i);
             }
-            map.put(sum, map.getOrDefault(sum, 0)+1);
+
         }
        return count;
     }
