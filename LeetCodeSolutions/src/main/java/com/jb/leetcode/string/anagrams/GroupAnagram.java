@@ -27,7 +27,7 @@ public class GroupAnagram {
             return  new ArrayList<>();
         }
         // MAp to store same str as key and list of anagrams
-        Map<String, List> result = new HashMap<>();
+        Map<String, List<String>> result = new HashMap<String, List<String>>();
         int[] count = new int[26];
         for(String s: strs){
             // reset count to 0 for every string
