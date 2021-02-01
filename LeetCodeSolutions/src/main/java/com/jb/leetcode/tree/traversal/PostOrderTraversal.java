@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  *
- * @Link https://leetcode.com/problems/binary-tree-preorder-traversal
+ * @Link https://leetcode.com/problems/binary-tree-postorder-traversal
  *
  * @author jbhushan
  */
