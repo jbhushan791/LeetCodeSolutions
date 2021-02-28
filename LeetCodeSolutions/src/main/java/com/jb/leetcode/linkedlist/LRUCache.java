@@ -105,7 +105,7 @@ public class LRUCache {
                 size--;
             }
         } else {
-            cache.put(key, node);
+            node.val = val;
             moveNodeToHead(node);
         }
 
