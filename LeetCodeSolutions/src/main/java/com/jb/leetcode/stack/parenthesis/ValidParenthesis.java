@@ -43,4 +43,41 @@ public class ValidParenthesis {
 
         return true;
     }
+
+    private boolean isBalanced(String s){
+        StringBuilder sb = new StringBuilder();
+        sb.append(s.charAt(0));
+        for (int i = 1; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if(check(c , sb)){
+                sb.replace(sb.length()-1, sb.length(), "");
+                sb.trimToSize();
+            } else {
+                sb.append(c);
+            }
+        }
+        return  sb.length() == 0;
+    }
+
+    private boolean check(Character c, StringBuilder sb){
+        if(sb.length() > 0){
+            Character prev = sb.charAt(sb.length()-1);
+            // System.out.println("Current "+c+" Befire "+prev);
+            switch(c){
+                case ')':
+                    if(prev == '('){
+                        return true;
+                    }
+                case ']':
+                    if(prev == '['){
+                        return true;
+                    }
+                case '}':
+                    if(prev == '{'){
+                        return true;
+                    }
+            }
+        }
+        return false;
+    }
 }
